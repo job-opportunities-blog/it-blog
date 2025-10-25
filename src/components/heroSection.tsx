@@ -9,8 +9,7 @@ const HeroSection: React.FC = () => {
             Welcome to the IT Blog
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8">
-            Your source for the latest in technology, programming, and IT
-            trends.
+            Your source to see what job opportunities are in the IT field.
           </p>
           <a
             href="/articles"

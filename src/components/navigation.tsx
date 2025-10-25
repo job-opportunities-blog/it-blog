@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
@@ -15,12 +16,12 @@ const Nav: React.FC = () => {
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-8">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-gray-600 hover:text-gray-900 transition"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a

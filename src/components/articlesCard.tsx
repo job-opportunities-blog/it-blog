@@ -1,22 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface ArticleCardProps {
-  id: number;
-  title: string;
-  summary: string;
-  author?: string;
-  date?: string;
-  category?: string;
-  link: string;
+  article: {
+    id: number;
+    title: string;
+    summary: string;
+    author: string;
+    date: string;
+    category: string;
+  };
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
-  title,
-  summary,
-  author,
-  date,
-  category,
-  link,
+  article: { id, title, summary, author, date, category },
 }) => {
   return (
     <article className="bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
@@ -24,17 +21,15 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         {/* Category & Read Time */}
         {category && (
           <div className="flex items-center justify-between mb-3">
-            {category && (
-              <span className="text-sm font-semibold text-indigo-600">
-                {category}
-              </span>
-            )}
+            <span className="text-sm font-semibold text-indigo-600">
+              {category}
+            </span>
           </div>
         )}
 
         {/* Title */}
         <h3 className="text-xl font-semibold text-gray-800 mb-4 hover:text-indigo-600 transition">
-          <a href={link}>{title}</a>
+          <Link to={`/articles/${id}`}>{title}</Link>
         </h3>
 
         {/* Summary */}
@@ -50,9 +45,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             {date && <span>{date}</span>}
           </div>
 
-          <a href={link} className="text-blue-600 hover:underline font-medium">
+          <Link
+            to={`/articles/${id}`}
+            className="text-blue-600 hover:underline font-medium"
+          >
             Read More →
-          </a>
+          </Link>
         </div>
       </div>
     </article>

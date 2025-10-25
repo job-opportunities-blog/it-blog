@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/heroSection";
 import ArticleCard from "../components/articlesCard";
+import { articles } from "../data/articles";
 
 const Home: React.FC = () => {
   return (
@@ -12,33 +13,9 @@ const Home: React.FC = () => {
             Latest Articles
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <ArticleCard
-              id={1}
-              title="Understanding React Hooks"
-              summary="A deep dive into React Hooks and how they can simplify your functional components."
-              author="Jane Doe"
-              date="June 10, 2024"
-              category="React"
-              link="/articles/react-hooks"
-            />
-            <ArticleCard
-              id={2}
-              title="CSS Grid vs. Flexbox: When to Use Which"
-              summary="An in-depth comparison of CSS Grid and Flexbox for modern web layouts."
-              author="John Smith"
-              date="June 8, 2024"
-              category="CSS"
-              link="/articles/css-grid-vs-flexbox"
-            />
-            <ArticleCard
-              id={3}
-              title="Getting Started with TypeScript"
-              summary="A beginner's guide to TypeScript and how it can improve your JavaScript code."
-              author="Alice Johnson"
-              date="June 5, 2024"
-              category="TypeScript"
-              link="/articles/getting-started-with-typescript"
-            />
+            {articles.slice(0, 3).map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
           </div>
         </div>
       </section>
