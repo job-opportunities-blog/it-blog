@@ -4,7 +4,7 @@ export const articles = [
     title: "Karier di Bidang Keamanan Siber untuk Lulusan IT",
     summary:
       "Dengan meningkatnya ancaman siber, cybersecurity menjadi bidang denga peluang kerja yang terus berkembang.",
-    author: "Andryan",
+    author: "Andryan A",
     date: "October 21, 2025",
     category: "Cybersecurity",
     content: `
@@ -53,7 +53,7 @@ export const articles = [
     title: "Peluang Karier di Dunia Front-End Development",
     summary:
       "Lulusan IT memiliki peluang besar di bidang front-end development yang terus berkembang dengan pesat, berfokus pada tampilan dan pengalaman pengguna.",
-    author: "John Smith",
+    author: "Firani N. A",
     date: "June 8, 2024",
     category: "Front End",
     content: `
@@ -80,7 +80,7 @@ export const articles = [
     title: "Meniti Karier di Bidang Back-End Development",
     summary:
       "Back-end developer berperan penting dalam membangun sistem yang kuat, aman, dan efisien untuk mendukung aplikasi modern.",
-    author: "Alice Johnson",
+    author: "Kuinsi Manda",
     date: "June 5, 2024",
     category: "Back End",
     content: `
@@ -107,7 +107,7 @@ export const articles = [
     title: "Peluang Kerja di Dunia Networking",
     summary:
       "Networking menjadi bidang penting dalam dunia IT karena menghubungkan sistem, perangkat, dan data secara global.",
-    author: "Bob Brown",
+    author: "Ivan R",
     date: "June 2, 2024",
     category: "Networking",
     content: `

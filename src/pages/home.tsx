@@ -9,9 +9,9 @@ const Home: React.FC = () => {
       <HeroSection />
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
             Latest Articles
-          </h2>
+          </h1>
           <div className="grid md:grid-cols-3 gap-8">
             {articles.slice(0, 3).map((article) => (
               <ArticleCard key={article.id} article={article} />

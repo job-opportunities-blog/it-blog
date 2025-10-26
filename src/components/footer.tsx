@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -9,8 +10,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">IT Blog</h3>
             <p className="text-sm text-gray-400">
-              Your source for the latest in technology, programming, and IT
-              trends. Stay updated with quality articles and tutorials.
+              Sumber Anda untuk melihat apa saja peluang kerja di bidang TI.
             </p>
           </div>
 
@@ -21,33 +21,33 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-sm hover:text-white transition">
+                <Link to="/" className="text-sm hover:text-white transition">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/articles"
+                <Link
+                  to="/articles"
                   className="text-sm hover:text-white transition"
                 >
                   Articles
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="text-sm hover:text-white transition"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="text-sm hover:text-white transition"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,36 +59,24 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/category/tutorial"
-                  className="text-sm hover:text-white transition"
-                >
-                  Tutorial
-                </a>
+                <Link to="/" className="text-sm hover:text-white transition">
+                  Cybersecurity
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/javascript"
-                  className="text-sm hover:text-white transition"
-                >
-                  JavaScript
-                </a>
+                <Link to="/" className="text-sm hover:text-white transition">
+                  Front End
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/css"
-                  className="text-sm hover:text-white transition"
-                >
-                  CSS
-                </a>
+                <Link to="/" className="text-sm hover:text-white transition">
+                  Back End
+                </Link>
               </li>
               <li>
-                <a
-                  href="/category/react"
-                  className="text-sm hover:text-white transition"
-                >
-                  React
-                </a>
+                <Link to="/" className="text-sm hover:text-white transition">
+                  Data Analyst
+                </Link>
               </li>
             </ul>
           </div>

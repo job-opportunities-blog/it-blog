@@ -1,21 +1,23 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/navigation";
+import Footer from "./components/footer";
 import Home from "./pages/home";
 import Article from "./pages/articles";
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import Footer from "./components/footer";
 import ArticleDetails from "./pages/articleDetails";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Nav />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Article />} />

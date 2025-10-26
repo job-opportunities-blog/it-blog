@@ -24,28 +24,28 @@ const Nav: React.FC = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="/articles"
+              <Link
+                to="/articles"
                 className="text-gray-600 hover:text-gray-900 transition"
               >
                 Articles
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="text-gray-600 hover:text-gray-900 transition"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="text-gray-600 hover:text-gray-900 transition"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -83,36 +83,36 @@ const Nav: React.FC = () => {
         {isMenuOpen && (
           <ul className="md:hidden mt-4 space-y-2 pb-4">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="block text-gray-600 hover:text-gray-900 transition py-2"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/articles"
+              <Link
+                to="/articles"
                 className="block text-gray-600 hover:text-gray-900 transition py-2"
               >
                 Articles
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="block text-gray-600 hover:text-gray-900 transition py-2"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="block text-gray-600 hover:text-gray-900 transition py-2"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         )}
