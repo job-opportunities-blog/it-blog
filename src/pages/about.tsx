@@ -6,7 +6,8 @@ const About: React.FC = () => {
       <section className="bg-blue-50 py-20 mt-20">
         <header className="max-w-6xl mx-auto text-gray-800 text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 text-center mb-3 tracking-tigh">
-            Tentang <span className="text-blue-600">Blog Peluang Karier IT</span>
+            Tentang{" "}
+            <span className="text-blue-600">Blog Peluang Karier IT</span>
           </h1>
           <p className="mt-2 text-lg opacity-90">
             Sumber Anda untuk melihat apa saja peluang kerja di bidang TI.
@@ -60,13 +61,13 @@ const About: React.FC = () => {
       <section className="grid md:grid-cols-2 gap-x-6 pt-2 pb-12 px-4 bg-blue-50 max-w-6xl mx-auto">
         <div className="max-w-6xl mx-auto bg-white mt-10 p-6 rounded-2xl shadow-[0_15px_20px_rgba(59,130,246,0.25)]">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-700 text-center pt-2 pb-2">
-              Tujuan Blog Ini Dibuat
+            Tujuan Blog Ini Dibuat
           </h2>
           <hr className="py-2 text-gray-400"></hr>
           <ul className="list-disc list-inside text-gray-600 leading-relaxed px-3 pb-3">
             <li>
-              Membantu lulusan IT memahami berbagai jalur karier yang tersedia di
-              dunia teknologi.
+              Membantu lulusan IT memahami berbagai jalur karier yang tersedia
+              di dunia teknologi.
             </li>
             <li>
               Menyajikan artikel informatif tentang tren indstri dan skill yang
@@ -89,12 +90,13 @@ const About: React.FC = () => {
           </h2>
           <hr className="py-2 text-white" />
           <p className="text-white leading-relaxed pb-3">
-            Banyak lulusan IT yang memiliki kemampuan teknis, tapi belum tah harus
-            mulai dari mana dalam meniti karier. Melalui blog ini, kami ingin
-            memberikan arah dan motivasi agar kamu bisa menemukan bidang yang
-            paling sesuai dengan passion dan potensimu di dunia teknologi. Karena
-            karier di IT bukan hanya tentang kode — tapi tentang bagaimana kamu
-            bisa menciptakan solusi yang bermanfaat bagi banyak orang.
+            Banyak lulusan IT yang memiliki kemampuan teknis, tapi belum tah
+            harus mulai dari mana dalam meniti karier. Melalui blog ini, kami
+            ingin memberikan arah dan motivasi agar kamu bisa menemukan bidang
+            yang paling sesuai dengan passion dan potensimu di dunia teknologi.
+            Karena karier di IT bukan hanya tentang kode — tapi tentang
+            bagaimana kamu bisa menciptakan solusi yang bermanfaat bagi banyak
+            orang.
           </p>
         </div>
       </section>
@@ -102,11 +104,23 @@ const About: React.FC = () => {
       <section className="bg-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <p className="text-gray-600 leading-relaxed mb-4">
-            Melalui blog ini, kami berharap dapat menjadi teman belajar dan sumber inspirasi bagi siapa pun yang tertarik meniti karier di dunia teknologi informasi. Setiap artikel yang kami tulis merupakan langkah kecil untuk membantu kamu memahami arah perkembangan industri IT, mengenali peluang yang ada, dan menyiapkan diri menghadapi tantangan masa depan. Mari tumbuh bersama, berbagi wawasan, dan membangun ekosistem digital yang semakin kuat di Indonesia.
+            Melalui blog ini, kami berharap dapat menjadi teman belajar dan
+            sumber inspirasi bagi siapa pun yang tertarik meniti karier di dunia
+            teknologi informasi. Setiap artikel yang kami tulis merupakan
+            langkah kecil untuk membantu kamu memahami arah perkembangan
+            industri IT, mengenali peluang yang ada, dan menyiapkan diri
+            menghadapi tantangan masa depan. Mari tumbuh bersama, berbagi
+            wawasan, dan membangun ekosistem digital yang semakin kuat di
+            Indonesia.
           </p>
 
           <p className="text-gray-600 leading-relaxed pb-4">
-            Kami percaya bahwa kesuksesan di dunia IT berawal dari informasi yang tepat dan kemauan untuk terus belajar. Melalui blog ini, kami berkomitmen menghadirkan berbagai wawasan, tips, serta peluang karier yang relevan dengan perkembangan industri teknologi. Tetap ikuti kami untuk mendapatkan update terbaru dan jadilah bagian dari generasi profesional IT yang siap bersaing di era digital.
+            Kami percaya bahwa kesuksesan di dunia IT berawal dari informasi
+            yang tepat dan kemauan untuk terus belajar. Melalui blog ini, kami
+            berkomitmen menghadirkan berbagai wawasan, tips, serta peluang
+            karier yang relevan dengan perkembangan industri teknologi. Tetap
+            ikuti kami untuk mendapatkan update terbaru dan jadilah bagian dari
+            generasi profesional IT yang siap bersaing di era digital.
           </p>
         </div>
       </section>
