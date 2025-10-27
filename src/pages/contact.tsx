@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../components/image";
+import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   return (
@@ -29,12 +30,12 @@ const Contact: React.FC = () => {
                 Email
               </h2>
               <p>
-                <a
-                  href="mailto:info@karierit.id"
+                <Link
+                  to="mailto:ariyanandryan@gmail.com"
                   className="text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
                 >
-                  info@karierit.id
-                </a>
+                  ariyanandryan@gmail.com
+                </Link>
               </p>
             </div>
 
@@ -42,50 +43,54 @@ const Contact: React.FC = () => {
               <h2 className="text-xl font-semibold text-gray-800 mb-2">
                 Media Sosial
               </h2>
-              <ul className="space-y-1 leading-relaxed">
-                <li className="md:flex space-x-2">
-                  <a
-                    href="https://www.linkedin.com/company/karierit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
-                  >
-                    <Image
-                      name="linkedin"
-                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
-                    />
-                    LinkedIn – Karier IT Indonesia
-                  </a>
-                </li>
-                <li className="md:flex space-x-2">
-                  <a
-                    href="https://www.instagram.com/karierit.id"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
-                  >
-                    <Image
-                      name="instagram"
-                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
-                    />
-                    Instagram – @karierit.id
-                  </a>
-                </li>
-                <li className="md:flex space-x-2">
-                  <a
-                    href="https://twitter.com/karierit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
-                  >
-                    <Image
-                      name="facebook"
-                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
-                    />
-                    Facebook – Peluang Karier IT
-                  </a>
-                </li>
-              </ul>
+              <div className="flex gap-2 pt-2 pb-4">
+                <Image
+                  name="linkedin"
+                  className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
+                />
+                <Image
+                  name="instagram"
+                  className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
+                />
+                <Image
+                  name="facebook"
+                  className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity duration-200"
+                />
+              </div>
+              <div className="border-l-2 border-blue-600 pl-4">
+                <ul className="leading-relaxed space-y-1">
+                  <li className="md:flex space-x-2">
+                    <Link
+                      to="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
+                    >
+                      LinkedIn – Karier IT Indonesia
+                    </Link>
+                  </li>
+                  <li className="md:flex space-x-2">
+                    <Link
+                      to="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
+                    >
+                      Instagram – @karierit.id
+                    </Link>
+                  </li>
+                  <li className="md:flex space-x-2">
+                    <Link
+                      to="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-blue-600 hover:underline hover:text-blue-700 transition-colors duration-200"
+                    >
+                      Facebook – Peluang Karier IT
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 

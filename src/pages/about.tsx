@@ -58,7 +58,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-x-6 pt-2 pb-12 px-4 bg-blue-50 max-w-6xl mx-auto">
+      <section className="grid md:grid-cols-2 gap-x-8 pt-2 pb-12 px-4 bg-blue-50 max-w-6xl mx-auto">
         <div className="max-w-6xl mx-auto bg-white mt-10 p-6 rounded-2xl shadow-[0_15px_20px_rgba(59,130,246,0.25)]">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-700 text-center pt-2 pb-2">
             Tujuan Blog Ini Dibuat
