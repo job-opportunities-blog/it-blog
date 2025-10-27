@@ -4,7 +4,7 @@ import Image from "../components/image";
 const Contact: React.FC = () => {
   return (
     <>
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 mt-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-800 mb-6">
             Hubungi Kami

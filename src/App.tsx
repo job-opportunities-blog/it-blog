@@ -15,18 +15,20 @@ import ScrollToTop from "./components/scrollToTop";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Nav />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Article />} />
-          <Route path="/articles/:id" element={<ArticleDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <div className="bg-blue-50">
+        <BrowserRouter>
+          <Nav />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/articles" element={<Article />} />
+            <Route path="/articles/:id" element={<ArticleDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
     </>
   );
 }

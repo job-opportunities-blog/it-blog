@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Image from "./image";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">IT Blog</h3>
+            <h1 className="flex items-center gap-x-2 text-white text-lg font-bold mb-4">
+              <Image name="infinity" className="w-10 h-10" shadow={false} />
+              IT Blog
+            </h1>
             <p className="text-sm text-gray-400">
               Sumber Anda untuk melihat apa saja peluang kerja di bidang TI.
             </p>

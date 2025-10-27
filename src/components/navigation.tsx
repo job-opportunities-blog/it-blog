@@ -1,16 +1,57 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Image from "./image";
 
 const Nav: React.FC = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isHomePage) return;
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomePage]);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header
+      className={`
+      fixed top-0 left-0 w-full z-50 
+      transition-all duration-300
+      ${
+        isHomePage
+          ? isScrolled || isMenuOpen
+            ? "bg-white shadow-blue-100 shadow-sm"
+            : "bg-transparent"
+          : "bg-white shadow-blue-100 shadow-sm"
+      }
+    `}
+    >
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
-          <div className="text-2xl font-bold text-gray-800">
-            <a href="/">IT Blog</a>
+          <div
+            className={`
+            text-2xl font-bold 
+            transition-colors duration-300
+            ${isHomePage && !isScrolled && !isMenuOpen ? "text-gray-100" : "text-gray-800"}
+          `}
+          >
+            <Link to="/" className="flex items-center space-x-2">
+              <Image name="infinity" className="w-12 h-12" shadow={false} />
+              <h1>
+                <span className="text-blue-600">IT</span> Blog
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links */}
@@ -18,7 +59,14 @@ const Nav: React.FC = () => {
             <li>
               <Link
                 to="/"
-                className="text-gray-600 hover:text-gray-900 transition"
+                className={`
+                  transition
+                  ${
+                    isHomePage && !isScrolled
+                      ? "text-gray-100 hover:text-gray-300"
+                      : "text-gray-600 hover:text-gray-900"
+                  }
+                `}
               >
                 Home
               </Link>
@@ -26,7 +74,14 @@ const Nav: React.FC = () => {
             <li>
               <Link
                 to="/articles"
-                className="text-gray-600 hover:text-gray-900 transition"
+                className={`
+                  transition
+                  ${
+                    isHomePage && !isScrolled
+                      ? "text-gray-100 hover:text-gray-300"
+                      : "text-gray-600 hover:text-gray-900"
+                  }
+                `}
               >
                 Articles
               </Link>
@@ -34,7 +89,14 @@ const Nav: React.FC = () => {
             <li>
               <Link
                 to="/about"
-                className="text-gray-600 hover:text-gray-900 transition"
+                className={`
+                  transition
+                  ${
+                    isHomePage && !isScrolled
+                      ? "text-gray-100 hover:text-gray-300"
+                      : "text-gray-600 hover:text-gray-800"
+                  }
+                `}
               >
                 About
               </Link>
@@ -42,7 +104,14 @@ const Nav: React.FC = () => {
             <li>
               <Link
                 to="/contact"
-                className="text-gray-600 hover:text-gray-900 transition"
+                className={`
+                  transition
+                  ${
+                    isHomePage && !isScrolled
+                      ? "text-gray-100 hover:text-gray-300"
+                      : "text-gray-600 hover:text-gray-800"
+                  }
+                `}
               >
                 Contact
               </Link>
@@ -51,7 +120,10 @@ const Nav: React.FC = () => {
 
           {/* Mobile Hamburger Button */}
           <button
-            className="md:hidden text-gray-600"
+            className={`
+              md:hidden transition
+              ${isHomePage && !isScrolled && !isMenuOpen ? "text-gray-100 hover:text-gray-300" : "text-gray-600 hover:text-gray-800"}
+            `}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -79,43 +151,52 @@ const Nav: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <ul className="md:hidden mt-4 space-y-2 pb-4">
-            <li>
+        {/* Mobile Menu dengan Animasi Slide Down */}
+        <div
+          className={`
+            md:hidden overflow-hidden transition-all duration-300 ease-in-out
+            ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+          `}
+        >
+          <ul className="space-y-2 pt-4 pb-4">
+            <li className="transform transition-all duration-300 delay-75">
               <Link
                 to="/"
-                className="block text-gray-600 hover:text-gray-900 transition py-2"
+                className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition py-2 px-3 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
             </li>
-            <li>
+            <li className="transform transition-all duration-300 delay-100">
               <Link
                 to="/articles"
-                className="block text-gray-600 hover:text-gray-900 transition py-2"
+                className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition py-2 px-3 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Articles
               </Link>
             </li>
-            <li>
+            <li className="transform transition-all duration-300 delay-150">
               <Link
                 to="/about"
-                className="block text-gray-600 hover:text-gray-900 transition py-2"
+                className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition py-2 px-3 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
             </li>
-            <li>
+            <li className="transform transition-all duration-300 delay-200">
               <Link
                 to="/contact"
-                className="block text-gray-600 hover:text-gray-900 transition py-2"
+                className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition py-2 px-3 rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>
             </li>
           </ul>
-        )}
+        </div>
       </nav>
     </header>
   );
