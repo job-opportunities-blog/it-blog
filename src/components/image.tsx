@@ -23,7 +23,7 @@ const Image: React.FC<ImageProps> = ({
   alt,
   caption,
   rounded = true,
-  shadow = true,
+  shadow = false,
   className = "",
 }) => {
   // cari gambar berdasarkan nama
@@ -50,7 +50,7 @@ const Image: React.FC<ImageProps> = ({
           w-full
           ${rounded ? "rounded-xl" : ""}
           ${shadow ? "shadow-md" : ""}
-          transition-transform duration-300 hover:scale-[1.02]
+          transition-transform duration-300
         `}
       />
       {caption && (
