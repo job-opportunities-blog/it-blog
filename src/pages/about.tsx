@@ -13,15 +13,15 @@ const About: React.FC = () => {
       {/* Hero Section */}
       <section
         className={`py-20 mt-20 bg-gradient-to-br transition-colors duration-300 ${
-          darkMode
-            ? "from-gray-900 to-blue-900"
-            : "from-blue-50 to-indigo-100"
+          darkMode ? "from-gray-900 to-blue-900" : "from-blue-50 to-indigo-100"
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div
             className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 transition-colors duration-300 ${
-              darkMode ? "bg-blue-900 text-blue-300" : "bg-blue-100 text-blue-700"
+              darkMode
+                ? "bg-blue-900 text-blue-300"
+                : "bg-blue-100 text-blue-700"
             }`}
           >
             💡 Tentang Kami

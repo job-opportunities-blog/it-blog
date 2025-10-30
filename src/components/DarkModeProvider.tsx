@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { DarkModeContext } from './DarkModeContext';
+import React, { useState, useEffect } from "react";
+import { DarkModeContext } from "./DarkModeContext";
 
-export const DarkModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const DarkModeProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode');
-    return saved === 'true';
+    const saved = localStorage.getItem("darkMode");
+    return saved === "true";
   });
 
   useEffect(() => {
-    localStorage.setItem('darkMode', darkMode.toString());
+    localStorage.setItem("darkMode", darkMode.toString());
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(prev => !prev);
+    setDarkMode((prev) => !prev);
   };
 
   return (

@@ -9,7 +9,7 @@ const Article: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredArticles = articles.filter((article) =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase())
+    article.title.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
@@ -18,7 +18,6 @@ const Article: React.FC = () => {
         darkMode ? "bg-gray-900" : "bg-white"
       }`}
     >
-
       {/* Hero Section */}
       <section className="pt-20">
         <header
@@ -31,9 +30,7 @@ const Article: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div
               className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 transition-colors duration-300 ${
-                darkMode
-                  ? "bg-white/10 text-white"
-                  : "bg-white/20 text-white"
+                darkMode ? "bg-white/10 text-white" : "bg-white/20 text-white"
               }`}
             >
               📚 Pusat Pengetahuan
@@ -132,9 +129,9 @@ const Article: React.FC = () => {
           {filteredArticles.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-8">
               {filteredArticles.map((article) => (
-                <ArticleCard 
-                  key={article.id} 
-                  article={article} 
+                <ArticleCard
+                  key={article.id}
+                  article={article}
                   darkMode={darkMode}
                 />
               ))}
@@ -183,8 +180,8 @@ const Article: React.FC = () => {
               Ingin Tahu Lebih Banyak?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Dapatkan update artikel terbaru dan tips seputar dunia IT
-              langsung ke email Anda.
+              Dapatkan update artikel terbaru dan tips seputar dunia IT langsung
+              ke email Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
               <input

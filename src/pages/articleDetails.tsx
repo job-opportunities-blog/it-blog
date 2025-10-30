@@ -37,7 +37,10 @@ const ArticleDetails: React.FC = () => {
     );
   }
 
-  const cleanContent = article.content.replace(/color:\s*#[0-9a-fA-F]{6};?/g, "");
+  const cleanContent = article.content.replace(
+    /color:\s*#[0-9a-fA-F]{6};?/g,
+    "",
+  );
 
   return (
     <div

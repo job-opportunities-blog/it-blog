@@ -17,7 +17,9 @@ const Home: React.FC = () => {
 
       <section
         className={`py-16 px-4 transition-colors duration-300 ${
-          darkMode ? "bg-gray-900 shadow-[0_-2px_8px_rgba(17,24,39,0.5)]" : "bg-white shadow-[0_-2px_8px_rgba(243,244,246,1)]"
+          darkMode
+            ? "bg-gray-900 shadow-[0_-2px_8px_rgba(17,24,39,0.5)]"
+            : "bg-white shadow-[0_-2px_8px_rgba(243,244,246,1)]"
         }`}
       >
         <div className="max-w-6xl mx-auto">
@@ -31,7 +33,11 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {articles.slice(0, 4).map((article) => (
-              <ArticleCard key={article.id} article={article} darkMode={darkMode} />
+              <ArticleCard
+                key={article.id}
+                article={article}
+                darkMode={darkMode}
+              />
             ))}
           </div>
         </div>

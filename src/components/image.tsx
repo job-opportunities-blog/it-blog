@@ -22,7 +22,7 @@ const Image: React.FC<ImageProps> = ({
   name,
   alt,
   caption,
-  rounded = true,
+  rounded = false,
   shadow = false,
   className = "",
 }) => {
